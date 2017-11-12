@@ -19,16 +19,45 @@
     </ion-card>
 </div>
 <div class="form">
-
+  <form class="pure-form">
+    <fieldset>
+      
   <label>What would you like us to call you? </label>
   <ion-input type="text" placeholder="Enter your name..."></ion-input>
 
-  <button ion-button secondary menuToggle>Learn It Next!</button>
+  You're interested in:
+  <select id="type">
+              <option>Front-end development</option>
+              <option>Back-end development</option>
+          </select>
+
+  <h3>Web Markup</h3>
   
-  <label>Web Markup</label><input type="checkbox">
-  <label>Frameworks</label><input type="checkbox">
+  <label>HTML</label><input type="checkbox">
+  <label>CSS</label><input type="checkbox">
   
-  <input type="radio">
+  <h3>Languages</h3>
+  <label>JavaScript</label><input type="checkbox">
+  <label>Python</label><input type="checkbox">
   
+  <h3>Frameworks</h3>
+  <h4>JavaScript</h4>
+  <label>Angular</label><input type="checkbox">
+  <label>React</label><input type="checkbox">
+  <label>Vue.js</label><input type="checkbox">
+  
+  <h4>Python</h4>
+  <label>Django</label><input type="checkbox">
+  <label>Twisted</label><input type="checkbox">
+
+  <h3>Testing</h3>
+  <h4>JavaScript</h4>
+  <label>Karma</label><input type="checkbox">
+  <label>Jasmine</label><input type="checkbox">
+  <label>Protractor</label><input type="checkbox">
+  
+  <p><button ion-button secondary menuToggle>Learn It Next!</button></p>
+</fieldset>
+</form>
 </div>
 </ion-content>
