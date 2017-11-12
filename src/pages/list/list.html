@@ -5,11 +5,25 @@
     </button>
     <ion-title>List</ion-title>
   </ion-navbar>
+  <img src="../../../assets/imgs/learn.png"/>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+  <ion-col col-14 col-md-10 col-lg-8>
+  <ion-card padding>
+  <h1>Results</h1>
+  {{this.name}}, based on your results, we think you should learn <h2>Angular</h2> next.
+</ion-card>
+</ion-col>
+<ion-col col-14 col-md-10 col-lg-8>
+<ion-card padding>
+  <h3>Where to Learn</h3>
+  <a href="http://angular.io">Official site</a>
+</ion-card>
+
+</ion-col>
+  <!-- <ion-list> -->
+    <!-- <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-start></ion-icon>
       {{item.title}}
       <div class="item-note" item-end>
@@ -19,5 +33,5 @@
   </ion-list>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  </div> -->
 </ion-content>

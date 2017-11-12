@@ -5,14 +5,30 @@
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
+  <img src="../../../assets/imgs/learn.png" width="240" height="89">
 </ion-header>
 
+
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  
+  <div class="top">
+  
+  <h2>What should you learn next?</h2>
+    <ion-card padding>
+      Please enter some information about your technical interests and expertise. We'll recommend a technology to learn next!
+    </ion-card>
+</div>
+<div class="form">
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <label>What would you like us to call you? </label>
+  <ion-input type="text" placeholder="Enter your name..."></ion-input>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary menuToggle>Learn It Next!</button>
+  
+  <label>Web Markup</label><input type="checkbox">
+  <label>Frameworks</label><input type="checkbox">
+  
+  <input type="radio">
+  
+</div>
 </ion-content>
