@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list'
 
@@ -7,13 +7,13 @@ import { ListPage } from '../list/list'
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+     @ViewChild('myNav') nav: NavController
   constructor(public navCtrl: NavController) {
 
   }
   
   submitForm() {
-    this.navCtrl.push(ListPage)
+    this.nav.setRoot(ListPage)
   }
 
 }

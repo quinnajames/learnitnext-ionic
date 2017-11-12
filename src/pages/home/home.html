@@ -1,62 +1,102 @@
+<ion-nav #myNav [root]="rootPage"></ion-nav>
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
   </ion-navbar>
-  <img src="../../../assets/imgs/learn.png" width="240" height="89">
+  <img src="../../../assets/imgs/learn.png"/>
+  <span class="headtext">Sign Up</span>
 </ion-header>
-
 
 <ion-content padding>
   
   <div class="top">
-  
+  <!-- 
   <h2>What should you learn next?</h2>
     <ion-card padding>
       Please enter some information about your technical interests and expertise. We'll recommend a technology to learn next!
-    </ion-card>
+    </ion-card> -->
 </div>
 <div class="form">
   <form class="pure-form">
     <fieldset>
-      
-  <label>What would you like us to call you? </label>
-  <ion-input type="text" placeholder="Enter your name..."></ion-input>
-
-  You're interested in:
+      <p>
+        Please enter some information about your technical interests and expertise. 
+        Based on the information you provide, we'll recommend a technology
+        or skill that you should learn next!</p>
+        
+          <ion-grid>
+            <ion-row>
+              <ion-col col-5>
+  <p><label>Name</label>
+  <input type="text" placeholder="Enter your name..."></p>
+</ion-col>
+<ion-col col-5>
+  <p><label>Email</label>
+  <input type="text" placeholder="Email address..."></p>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-5>
+  <p>You're interested in:
   <select id="type">
               <option>Front-end development</option>
               <option>Back-end development</option>
-          </select>
+          </select></p>
+          
+        </ion-col>
+        <ion-col col-5>
+  Please check the technologies you know <i>confidently</i>. (We won't recommend those.)
+</ion-col>
+</ion-row>
 
-  <h3>Web Markup</h3>
-  
-  <label>HTML</label><input type="checkbox">
-  <label>CSS</label><input type="checkbox">
-  
+  <ion-row>
+    <ion-col col-5>
   <h3>Languages</h3>
-  <label>JavaScript</label><input type="checkbox">
-  <label>Python</label><input type="checkbox">
+  <h4>Web Markup</h4>
+  <p><label>HTML</label><input type="checkbox">
+  <label>CSS</label><input type="checkbox"></p>
   
+  <h4>Object Oriented/Functional</h4>
+  <p><label>JavaScript</label><input type="checkbox">
+  <label>Python</label><input type="checkbox"></p>
+</ion-col>
+  <ion-col col-5>
+    
   <h3>Frameworks</h3>
   <h4>JavaScript</h4>
-  <label>Angular</label><input type="checkbox">
+  <p><label>Angular</label><input type="checkbox">
   <label>React</label><input type="checkbox">
-  <label>Vue.js</label><input type="checkbox">
-  
-  <h4>Python</h4>
-  <label>Django</label><input type="checkbox">
-  <label>Twisted</label><input type="checkbox">
+  <label>Vue.js</label><input type="checkbox"></p>
 
-  <h3>Testing</h3>
-  <h4>JavaScript</h4>
-  <label>Karma</label><input type="checkbox">
-  <label>Jasmine</label><input type="checkbox">
-  <label>Protractor</label><input type="checkbox">
-  
-  <p><button ion-button secondary menuToggle (onClick)=submitForm()>Learn It Next!</button></p>
+  <h4>Python</h4>
+  <p><label>Django</label><input type="checkbox" disabled>
+  <label>Twisted</label><input type="checkbox" disabled></p>
+</ion-col>
+
+</ion-row>
+
+  <ion-row>
+    <ion-col col-5>
+<h3>Testing</h3>
+<label>Karma</label><input type="checkbox">
+<label>Jasmine</label><input type="checkbox">
+<label>Protractor</label><input type="checkbox">
+
+</ion-col>
+<ion-col col-5>
+<h3>Workflow</h3>
+<label>Git</label><input type="checkbox">
+<label>Jenkins</label><input type="checkbox">
+<label>CircleCI</label><input type="checkbox">
+</ion-col>
+
+</ion-row>
+  </ion-grid>
+
+    
+  <p><button ion-button primary menuToggle class="big" (onClick)=submitForm()>Learn It Next!</button></p>
 </fieldset>
 </form>
 </div>

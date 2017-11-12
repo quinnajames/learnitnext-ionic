@@ -1,37 +1,59 @@
+<ion-nav #myNav [root]="rootPage"></ion-nav>
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
   </ion-navbar>
   <img src="../../../assets/imgs/learn.png"/>
+  <span class="headtext">Results</span>
 </ion-header>
 
-<ion-content>
-  <ion-col col-14 col-md-10 col-lg-8>
+<div class="buffer">
+  &nbsp;
+</div>
+<ion-grid>
+    <ion-row>
+  <ion-col col-5>
   <ion-card padding>
   <h1>Results</h1>
-  {{this.name}}, based on your results, we think you should learn <h2>Angular</h2> next.
+  <p>{{this.name}}, based on your results, we think you should learn</p> <h1 class="result">Angular 2</h1><p> next.</p>
+  <p><i><a>(More learning options ...)</a></i></p>
 </ion-card>
 </ion-col>
-<ion-col col-14 col-md-10 col-lg-8>
+<ion-col col-6>
+  <ion-card padding>
+  <h2 class="result">Angular 2</h2>
+  <p><i>(Prerequisites: HTML, JavaScript)</i></p>
+  <p>Angular is a JavaScript framework for building reusable web and mobile web applications, developed by Google
+    since 2010. Angular is known for its <a href="#"><i>two-way binding</i></a> system, allowing changes in your application's
+    <a href="#"><i>state</i></a> to be quickly reflected on your user's screen.</p>
+    
+  </ion-card>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-5>
+    
+    <ion-card padding class="noborder">
+      <h3>Where to Learn</h3>
+      <ul>
+      <li><a href="http://angular.io">Official site</a> <i>(angular.io)</i>
+      <li><a href="https://angular-2-training-book.rangle.io/">Angular 2 Training Book</a> (rangle.io)
+      
+    </ul>
+  </ion-card>
+  </ion-col>
+  <ion-col col-6>
 <ion-card padding>
-  <h3>Where to Learn</h3>
-  <a href="http://angular.io">Official site</a>
+<h3>How close am I?</h3>
+<p>Based on the skill sets we've reviewed of successful front-end developers, you are:</p>
+<ul>
+<li><b>88%</b> ready for a Junior Front-End Quality Assurance position (<a href="#">Take test</a>)
+<li><b>61%</b> ready for a Junior Front-End Web Developer position
+</ul>
 </ion-card>
-
 </ion-col>
-  <!-- <ion-list> -->
-    <!-- <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div> -->
-</ion-content>
+</ion-row>
+</ion-grid>
+
